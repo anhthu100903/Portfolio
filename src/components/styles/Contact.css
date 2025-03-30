@@ -1,0 +1,87 @@
+/* components/styles/Contact.css */
+.contact-section {
+  width: 100%;
+  padding: 60px 10%;
+  background: linear-gradient(to right, #1e5b5e, #313a4b); /* Gradient đẹp */
+  text-align: center;
+  box-sizing: border-box;
+  min-height: calc(100vh - 70px);
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: row; /* Các item sẽ nằm trên cùng một hàng */
+  justify-content: center;
+  gap: 30px; /* Khoảng cách giữa các item */
+  margin-bottom: 40px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.2); /* Làm nền trong suốt cho các item */
+  border-radius: 8px; /* Bo tròn các góc */
+  transition: background-color 0.3s ease;
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.contact-item a:hover {
+  color: #4caf50;
+}
+
+.contact-item svg {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.contact-item svg:hover {
+  color: #4caf50;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: row; /* Các item này sẽ nằm dưới các item trên */
+  justify-content: center;
+  gap: 30px; /* Khoảng cách giữa các item */
+}
+
+.contact-item:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Tăng độ sáng nền khi hover */
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 60px 5%;
+  }
+
+  .contact-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .contact-item {
+    font-size: 1.1rem;
+  }
+
+  .contact-info, .contact-links {
+    flex-direction: column; /* Sắp xếp theo chiều dọc trên màn hình nhỏ */
+    align-items: center;
+  }
+}

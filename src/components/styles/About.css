@@ -1,0 +1,105 @@
+/* components/styles/About.css */
+.about-section {
+  background: linear-gradient(to right, #1e5b5e, #313a4b); /* Gradient đẹp */
+  padding: 100px 10%;
+  min-height: calc(100vh - 70px); /* Chiếm hết chiều cao màn hình trừ header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  transition: background 1s ease-in-out; /* Tạo hiệu ứng chuyển background mượt mà */
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%; /* Đảm bảo không bị tràn */
+}
+
+/* Cột trái - Ảnh đại diện */
+.about-img {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Ảnh đại diện */
+.about-pic {
+  width: 80%;
+  height: auto;
+  border-radius: 50%; /* Tạo hình tròn cho ảnh */
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ để ảnh nổi bật */
+}
+
+/* Cột phải - Nội dung */
+.about-text {
+  width: 55%;
+  text-align: left;
+  color: #ffffff; /* Màu chữ trắng để nổi bật trên nền tối */
+}
+
+/* Tiêu đề */
+.about-heading {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+/* Mô tả ngắn về bản thân */
+.about-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.about-intro strong {
+  color: #d1dc5e;
+}
+
+/* Thông tin cá nhân */
+.about-info {
+  margin-top: 20px;
+}
+
+.about-info ul {
+  list-style: none;
+  padding: 0;
+  color: #ffffff;
+}
+
+.about-info li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Thêm hiệu ứng hover cho liên kết */
+.about-info a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about-info a:hover {
+  text-decoration: underline;
+}
+
+/* Đảm bảo rằng section có chiều cao đúng khi chuyển cảnh */
+@media (max-width: 768px) {
+  .about-img {
+    width: 100%; /* Ảnh chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+    margin-bottom: 20px; /* Tạo khoảng cách giữa ảnh và text */
+  }
+
+  .about-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-heading {
+    font-size: 2rem;
+  }
+}
