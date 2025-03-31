@@ -7,6 +7,7 @@ import "./styles/Resume.css"; // Import CSS file cho giao diện
 // Cấu hình workerSrc cho pdf.js (Dành cho phiên bản mới của react-pdf)
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
+
 function Resume() {
   const [width, setWidth] = useState(window.innerWidth); // Lưu chiều rộng của cửa sổ
 
@@ -28,7 +29,7 @@ function Resume() {
       {/* Hiển thị PDF */}
       <div className="resume">
         <Document
-          file="/CV.pdf"
+          file={pdf}
           onLoadSuccess={() => console.log("PDF Loaded Successfully!")}
           onLoadError={(error) => console.error("PDF Load Error:", error)}
         >

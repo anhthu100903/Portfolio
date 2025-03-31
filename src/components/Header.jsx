@@ -1,9 +1,18 @@
 // components/Header.js
-import React from "react";
+import React, {useState} from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/img_logo.jpg";
 import "./styles/Header.css";
 
 function Header({ handleScrollTo, activeTab }) {
+  // Trạng thái để kiểm soát việc mở/đóng menu trên mobile
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Xử lý toggle menu
+  const toggleMenu = () => {
+    setIsMobile(!isMobile);
+  };
+
   return (
     <header className="header">
       {/* Thay h1 bằng thẻ img */}
@@ -12,7 +21,7 @@ function Header({ handleScrollTo, activeTab }) {
         <h4>Anh Thư</h4>
       </div>
       <nav>
-        <ul>
+        <ul className={isMobile ? "nav-links nav-active" : "nav-links"}>
           <li
             onClick={() => handleScrollTo("home")}
             className={activeTab === "home" ? "active" : ""}
@@ -51,6 +60,11 @@ function Header({ handleScrollTo, activeTab }) {
           </li>
         </ul>
       </nav>
+
+      {/* Icon Hamburger/Close cho mobile */}
+      <div className="hamburger" onClick={toggleMenu}>
+        {isMobile ? <FaTimes size={24} /> : <FaBars size={24} />}
+      </div>
     </header>
   );
 }
