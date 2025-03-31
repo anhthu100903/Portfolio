@@ -1,6 +1,7 @@
 /* components/styles/Resume.css */
 
 .resume-section {
+  min-height: calc(100vh - 70px);
   padding: 60px 10%;
   background: linear-gradient(to right, #313a4b, #1e5b5e); 
   position: relative;
